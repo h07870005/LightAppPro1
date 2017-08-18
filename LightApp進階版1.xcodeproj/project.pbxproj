@@ -14,6 +14,7 @@
 		197F0AD01F45BFA500B5831C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197F0ACE1F45BFA500B5831C /* LaunchScreen.storyboard */; };
 		197F0ADB1F45BFA500B5831C /* LightApp___1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197F0ADA1F45BFA500B5831C /* LightApp___1Tests.swift */; };
 		197F0AE61F45BFA500B5831C /* LightApp___1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197F0AE51F45BFA500B5831C /* LightApp___1UITests.swift */; };
+		197F0AF41F45BFBE00B5831C /* LightAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197F0AF31F45BFBE00B5831C /* LightAppViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		197F0AE11F45BFA500B5831C /* LightApp進階版1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LightApp進階版1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		197F0AE51F45BFA500B5831C /* LightApp___1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightApp___1UITests.swift"; sourceTree = "<group>"; };
 		197F0AE71F45BFA500B5831C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		197F0AF31F45BFBE00B5831C /* LightAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightAppViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				197F0AC51F45BFA500B5831C /* AppDelegate.swift */,
 				197F0AC71F45BFA500B5831C /* ViewController.swift */,
 				197F0AC91F45BFA500B5831C /* Main.storyboard */,
+				197F0AF31F45BFBE00B5831C /* LightAppViewController.swift */,
 				197F0ACC1F45BFA500B5831C /* Assets.xcassets */,
 				197F0ACE1F45BFA500B5831C /* LaunchScreen.storyboard */,
 				197F0AD11F45BFA500B5831C /* Info.plist */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197F0AF41F45BFBE00B5831C /* LightAppViewController.swift in Sources */,
 				197F0AC81F45BFA500B5831C /* ViewController.swift in Sources */,
 				197F0AC61F45BFA500B5831C /* AppDelegate.swift in Sources */,
 			);
