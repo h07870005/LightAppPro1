@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GameplayKit
+
 
 
 
@@ -19,67 +21,70 @@ class LightAppViewController: UIViewController {
     
     @IBOutlet weak var colorChangeButton: UIButton!
     
-    var color1 = UIColor(red: CGFloat(148.0/255.0), green: CGFloat(0.0/255.0), blue: CGFloat(211.0/255.0), alpha: 1)
-    var color2 = UIColor(red: CGFloat(75.0/255.0), green: CGFloat(0.0/255.0), blue: CGFloat(130.0/255.0), alpha: 1)
-    var color3 = UIColor.blue
-    var color4 = UIColor.green
-    var color5 = UIColor.yellow
-    var color6 = UIColor.orange
-    var color7 = UIColor.red
-    var color8 = UIColor.brown
-    
-    var count = 0
+    @IBOutlet weak var RandomNumber: UILabel!
     
     
-    func colorRainBow (){
-        count = count + 1
-        Button.text = "\(count)"
-        if count == 1 {
-            colorView.backgroundColor = color1
-        }else{
-            if count == 2 {
-                colorView.backgroundColor = color2
-            }else{
-                if count == 3 {
-                    colorView.backgroundColor = color3
-                }else{
-                    if count == 4 {
-                        colorView.backgroundColor = color4
-                    }else {
-                        if count == 5 {
-                            colorView.backgroundColor = color5
-                        }else {
-                            if count == 6 {
-                                colorView.backgroundColor = color6
-                            }else {
-                                if count == 7 {
-                                    colorView.backgroundColor = color7
-                                    count = 0
-                                }else{
-                                    
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+    let 紫色 = UIColor(red: CGFloat(148), green: CGFloat(0), blue: CGFloat(211), alpha: 1)
+    let 靛色 = UIColor(red: CGFloat(75), green: CGFloat(0), blue: CGFloat(130), alpha: 1)
+    let 藍色 = UIColor(red: CGFloat(0), green: CGFloat(0), blue: CGFloat(255), alpha: 1)
+    let 綠色 = UIColor(red: CGFloat(0), green: CGFloat(255), blue: CGFloat(0), alpha: 1)
+    let 黃色 = UIColor(red: CGFloat(255), green: CGFloat(255), blue: CGFloat(0), alpha: 1)
+    let 橙色 = UIColor(red: CGFloat(255), green: CGFloat(127), blue: CGFloat(0), alpha: 1)
+    let 紅色 = UIColor(red: CGFloat(255), green: CGFloat(0), blue: CGFloat(0), alpha: 1)
+    
+    func colorRandom (){
+        let colorarray = [紫色,靛色,藍色,綠色,黃色,橙色,紅色]
+        let numbercolor = GKShuffledDistribution(lowestValue: 0, highestValue: colorarray.count-1)
+        let number = numbercolor.nextInt()
+        colorView.backgroundColor = colorarray[number]
+        print(number)
+        RandomNumber.text = "\(number)"
+        
+       /* if number == 0 {
+            colorView.backgroundColor = 紫色
+            RandomNumber.text = "\(number)"
         }
+        if number == 1 {
+            colorView.backgroundColor = 靛色
+            RandomNumber.text = "\(number)"
+        }
+        if number == 2 {
+            colorView.backgroundColor = 藍色
+            RandomNumber.text = "\(number)"
+        }
+        if number == 3 {
+            colorView.backgroundColor = 綠色
+            RandomNumber.text = "\(number)"
+        }
+        if number == 4 {
+            colorView.backgroundColor = 黃色
+            RandomNumber.text = "\(number)"
+        }
+        if number == 5 {
+            colorView.backgroundColor = 橙色
+            RandomNumber.text = "\(number)"
+        }
+        if number == 6 {
+            colorView.backgroundColor = 紅色
+            RandomNumber.text = "\(number)"
+        }
+ */
     }
-
+    
+    
     
 
     
     @IBAction func colorChangeButton(_ sender: UIButton) {
         
-        colorRainBow()
-        
-        
+        colorRandom()
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        colorRandom()
         // Do any additional setup after loading the view.
     }
 
